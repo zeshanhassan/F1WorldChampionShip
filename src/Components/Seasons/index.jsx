@@ -16,20 +16,18 @@ const Seasons = ({ data }) => {
       {seasonsData &&
         seasonsData.length > 0 &&
         seasonsData.map((item, index) => (
-          <Card style={{ width: "18rem" }} key={index}>
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
-              <Card.Title>{item.season}</Card.Title>
-              <Button
-                variant="primary"
-                onClick={() => {
-                  openModel(item.season);
-                }}
-              >
-                More Details
-              </Button>
-            </Card.Body>
-          </Card>
+          <div className="card-item col-sm-3" key={index} onClick={() => {
+            openModel(item.season);
+          }}>
+            <div className="container">
+              <div className="inner">
+                <img src="/images/race-car1.png"/>
+                <div className="decor">
+                </div>
+                <div className="year">{item.season}</div>                
+              </div>
+            </div>
+          </div>
         ))}
       {openWinnerModel && (
         <MQModal

@@ -1,3 +1,65 @@
 .modal-80w {
     max-width: 80% !important;
 }
+.seasons{
+    background: rgba(0, 0, 0, 0.4) url("assets/bg.jpg") no-repeat fixed center  ;
+    background-size: contain;
+}
+.season-container{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.card-item {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.card-item .container {
+    box-shadow: -6px 0 0 0 #dc2d13;
+    height: 210px;
+    color: #fff;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.5s;
+    transform: skewX(6deg);
+    margin-bottom: 30px;
+}
+
+.card-item .inner {
+    transform: skewX(-6deg);
+}
+
+.card-item img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.card-item .decor {
+    width: 30px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.card-item .decor::after {
+    display: block;
+    width: 30px;
+    margin-top: 2px;
+    margin-left: 10px;
+    border-top: 1px solid #ccc;
+    content: '';
+}
+
+.card-item .year {
+    padding-top: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card-item:hover .container {
+    background-color: #dc2d13;
+}

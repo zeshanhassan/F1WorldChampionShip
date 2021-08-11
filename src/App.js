@@ -23,21 +23,23 @@ class App extends React.Component {
     }
     return (
       <Loader loaded={!isFetching}>
-        <Container>
-          <Row>
-            <header className="App-header">
-              <h1>F1 WORLD CHAMPIONS</h1>
-            </header>
-          </Row>
-          <Row>{seasonData.length > 0 && <Seasons data={seasonData} />}</Row>
-        </Container>
+        <header className="App-header">
+          <h1>F1 WORLD CHAMPIONS</h1>
+        </header>
+        <div className="seasons">
+          <div className="season-container">
+          <Container style={{ marginTop: "30px" }}>
+            <Row>{seasonData.length > 0 && <Seasons data={seasonData} />}</Row>
+          </Container>
+          </div>
+          
+        </div>
       </Loader>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  //console.log(state);
   return {
     seasons: state.f1Seasons.f1SeasonsData,
     isFetching: state.f1Seasons.isFetching,
