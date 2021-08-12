@@ -1,3 +1,102 @@
-.chammpion{
-    background-color: yellow;
+.modal-body{
+    background-color:  #f5f5f5;
+    max-height: 75vh;
+    overflow-y: auto;
+    min-height: 40vh;
+}
+.list-item {
+    overflow: hidden;
+    margin-bottom: 25px;
+    padding: 24px 21px 10px;
+    background-color: #fff;
+}
+
+.list-item .list-image {
+    position: relative;
+    float: left;
+    width: 30%;
+}
+
+.list-item .list-image img {
+    width: 100%;
+}
+
+.list-item .list-body {
+    float: left;
+    width: calc(100% - 35%);
+    margin-left: 4%;
+}
+
+.list-item .decor {
+    width: 50px;    
+    margin-bottom: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.list-item .decor::after {
+    display: block;
+    width: 50px;
+    margin-top: 2px;
+    margin-left: 10px;
+    border-top: 1px solid #ccc;
+    content: '';
+}
+
+.list-wrap-label {
+    position: absolute;
+    bottom: 23px;
+    left: 20px;
+    padding: 10px 16px;
+    background: red;
+    box-shadow: 5px 0 0 0 #fff;
+    transform: skewX(-18deg);
+}
+
+.list-label {
+    display: block;
+    
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    transform: skewX(18deg);
+}
+.list-price{
+    display: inline-block;
+    padding-bottom: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #555;
+    vertical-align: top;
+}
+.list-price-number{
+    display: block;
+    margin-top: 7px;
+    font-size: 24px;
+    color: #dc2d13;
+}
+.list-price-number a{
+    color: #dc2d13;
+}
+.ul-list{
+    display: inline-block;
+    width: 65%;
+    list-style: none;
+}
+.ul-list .list-row{
+    float: left;
+    width: 50%;
+    margin-bottom: 5px;
+    padding-right: 30px;
+    font-size: 11px;
+    color: #777;
+    list-style: none;
+}
+.list-title{
+    padding-right: 13px;
+    font-weight: 700;
+    color: #555;
+}
+.list-info{
+
 }

@@ -22,7 +22,8 @@ class App extends React.Component {
       seasonData = seasons.SeasonTable.Seasons;
     }
     return (
-      <Loader loaded={!isFetching}>
+      <Loader loaded={!isFetching} color="#dc2d13"
+      width={20}>
         <header className="App-header">
           <h1>F1 WORLD CHAMPIONS</h1>
         </header>

@@ -1,14 +1,3 @@
-https://ergast.com/api/f1/seasons?limit=18&offset=55
-https://ergast.com/api/f1/2005/results/1.json for details
-
-
-Task 1=>list of seasons
-Task 2=>On click open a dialog with list of winners
-Task 3=>Highlight the champion of winners
-
-
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
