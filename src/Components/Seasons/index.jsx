@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Card, Button } from "react-bootstrap";
 import MQModal from "../../Shared/MQModel/index";
 import Winners from "./../Winners";
 import "./index.css";
@@ -21,7 +20,7 @@ const Seasons = ({ data }) => {
           }}>
             <div className="container">
               <div className="inner">
-                <img src="/images/race-car1.png"/>
+                <img src="/images/race-car1.png" alt="car pic"/>
                 <div className="decor">
                 </div>
                 <div className="year">{item.season}</div>                

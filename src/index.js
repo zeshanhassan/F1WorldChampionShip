@@ -4,7 +4,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
-import { ToastContainer } from "react-toastify";
+
 import createSagaMiddleware from "redux-saga";
 import rootReducer from "./Reducers";
 import mySaga from "./Reducers/Saga";
@@ -14,24 +14,13 @@ import "react-toastify/dist/ReactToastify.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const sagaMiddleware = createSagaMiddleware();
-export const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 sagaMiddleware.run(mySaga);
 ReactDOM.render(
   <Provider store={store}>
-    <App />
-    <ToastContainer
-      position="top-right"
-      autoClose={5000}
-      hideProgressBar={false}
-      newestOnTop={false}
-      closeOnClick
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-    />
+    <App/>    
   </Provider>,
-  document.getElementById("root")
+  document.getElementById("mobiquity-root")
 );
 
 // If you want to start measuring performance in your app, pass a function

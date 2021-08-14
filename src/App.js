@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { GET_F1SEASONS_DATA } from "./Actions";
 import Loader from "react-loader";
+import { ToastContainer } from "react-toastify";
 import Seasons from "./Components/Seasons";
 import { Container, Row } from "react-bootstrap";
 import "./App.css";
@@ -22,11 +23,12 @@ class App extends React.Component {
       seasonData = seasons.SeasonTable.Seasons;
     }
     return (
-      <Loader loaded={!isFetching} color="#dc2d13"
-      width={20}>
-        <header className="App-header">
+      <>
+      <header className="App-header">
           <h1>F1 WORLD CHAMPIONS</h1>
         </header>
+      <Loader loaded={!isFetching} color="#dc2d13"
+      width={20}>        
         <div className="seasons">
           <div className="season-container">
           <Container style={{ marginTop: "30px" }}>
@@ -36,6 +38,18 @@ class App extends React.Component {
           
         </div>
       </Loader>
+      <ToastContainer
+      position="top-right"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+    />
+    </>
     );
   }
 }

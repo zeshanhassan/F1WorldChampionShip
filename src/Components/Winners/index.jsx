@@ -76,7 +76,7 @@ const Winners = ({ year }) => {
         winnersData.map((wd, index) => (
           <div className="list-item" key={index}>
             <div className="list-image">
-              <img src="/images/bg.jpg" />
+              <img src="/images/bg.jpg" alt="bg"/>
               {wd.isChampion && (
                 <span className="list-wrap-label">
                   <span className="list-label">Champion</span>
@@ -116,7 +116,7 @@ const Winners = ({ year }) => {
               <div className="list-price">
                 Winner info:
                 <span className="list-price-number">
-                  <a href={wd.WinnerInfo} target="_blank">
+                  <a href={wd.WinnerInfo} target="_blank" rel="noopener noreferrer">
                     {wd.Winner}
                   </a>
                 </span>
