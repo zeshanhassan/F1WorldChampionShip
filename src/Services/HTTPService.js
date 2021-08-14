@@ -2,8 +2,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 axios.interceptors.response.use(
-  (response) => {
-    console.error("response", response);
+  (response) => { 
 
     return response;
   },
@@ -26,7 +25,7 @@ axios.interceptors.response.use(
     }
     if (!expectedError) {
       toast.error("An unexpected error occurrred");
-      console.error(expectedError);
+      
     }
 
     return Promise.reject(error);
@@ -34,8 +33,7 @@ axios.interceptors.response.use(
 );
 
 axios.interceptors.request.use((req) => {
-  console.log(`${req.method} ${req.url}`);
-  // Important: request interceptors **must** return the request.
+  //console.log(`${req.method} ${req.url}`);  
   return req;
 });
 
